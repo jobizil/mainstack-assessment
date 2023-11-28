@@ -13,7 +13,7 @@
   "scripts": {
     "build": "tsc --project  tsconfig.json && tsc-alias -p tsconfig.json",
     "dev": "nodemon --exec ts-node ./index.ts",
-    "start": "npm run build && ts-node ./index.ts",
+    "start": "ts-node dist/index.js",
     "prisma:init": "npx prisma init",
     "prisma:generate": "npx prisma generate",
     "prisma:seed": "ts-node prisma/seed.ts",
