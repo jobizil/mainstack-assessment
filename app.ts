@@ -1,14 +1,14 @@
 
+import cors from "cors";
 import express from "express";
-import { DATABASE_URL, NODE_ENV, API_VERSION } from "./src/utils/config";
+import helmet from "helmet";
+import morgan from "morgan";
+import { API_VERSION, DATABASE_URL, NODE_ENV } from "./src/utils/config";
 import valiateEnv from "./src/utils/validate-env";
 require("dotenv").config();
-import morgan from "morgan";
-import helmet from "helmet";
-import cors from "cors";
 
-import userRoute from "./src/controller/user/user-route";
 import productRouter from "./src/controller/product/product-route";
+import userRoute from "./src/controller/user/user-route";
 
 
 const app = express();
