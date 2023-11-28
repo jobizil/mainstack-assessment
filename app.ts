@@ -30,7 +30,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 // Health Check
-app.get(`/api/${API_VERSION}/check`, (_, Response) =>
+app.get("/check", (_, Response) =>
     Response.send("App is running!")
 );
 
