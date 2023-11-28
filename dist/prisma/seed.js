@@ -4,11 +4,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const database_server_1 = require("../src/utils/database-server");
-const bcrypt_1 = __importDefault(require("bcrypt"));
+const bcryptjs_1 = __importDefault(require("bcryptjs"));
 const adminUser = [{
         email: "admin@proton.me",
         username: "admin",
-        password: bcrypt_1.default.hashSync('!QAZXSW@#E', 10)
+        password: bcryptjs_1.default.hashSync('!QAZXSW@#E', 10)
     }];
 async function seedData() {
     for (const admin of adminUser) {

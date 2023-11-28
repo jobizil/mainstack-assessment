@@ -1,6 +1,6 @@
 import { db } from "../src/utils/database-server";
 
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 
 const adminUser = [{
     email: "admin@proton.me",
