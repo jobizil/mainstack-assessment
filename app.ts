@@ -33,6 +33,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get(`/api/${API_VERSION}/check`, (_, Response) =>
     Response.send("Api is running!")
 );
+
 app.get(`/`, (_, Response) =>
     Response.send("App is running!")
 );
