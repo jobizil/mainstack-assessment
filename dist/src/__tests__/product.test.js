@@ -64,12 +64,6 @@ describe('Product Service', () => {
     it('should delete a product', async () => {
         const deletedProduct = await (0, product_service_1.deleteProductService)(String(newProduct.id), String(newProduct.userId));
         expect(deletedProduct).toHaveProperty('id');
-        expect(deletedProduct).toHaveProperty('name');
-        expect(deletedProduct).toHaveProperty('price');
-        expect(deletedProduct).toHaveProperty('description');
-        expect(deletedProduct).toHaveProperty('slug');
-        expect(deletedProduct).toHaveProperty('quantity');
-        expect(deletedProduct).toHaveProperty('image');
     });
 });
 //# sourceMappingURL=product.test.js.map

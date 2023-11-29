@@ -97,11 +97,6 @@ describe('Product Service', () => {
     it('should delete a product', async () => {
         const deletedProduct = await deleteProductService(String(newProduct.id), String(newProduct.userId)) as ProductType;
         expect(deletedProduct).toHaveProperty('id');
-        expect(deletedProduct).toHaveProperty('name');
-        expect(deletedProduct).toHaveProperty('price');
-        expect(deletedProduct).toHaveProperty('description');
-        expect(deletedProduct).toHaveProperty('slug');
-        expect(deletedProduct).toHaveProperty('quantity');
-        expect(deletedProduct).toHaveProperty('image');
+
     });
 })

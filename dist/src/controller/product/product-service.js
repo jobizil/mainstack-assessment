@@ -81,8 +81,11 @@ const deleteProductService = async (productId, userId) => {
     if (!product) {
         throw new Error("Invalid product id.");
     }
+    if (product && product.userId !== userId) {
+        throw new Error("Sorry, you can't delete product not created by you.");
+    }
     const deletedProduct = await database_server_1.db.product.delete({
-        where: { id: productId, userId: userId }
+        where: { id: productId }
     });
     return deletedProduct;
 };

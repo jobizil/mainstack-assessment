@@ -40,7 +40,6 @@ export const registerUserController = async (req: Request, res: Response) => {
 
         return res.status(500).json({
             success: false,
-            message: "Something went wrong",
             error: error.message
         });
     }

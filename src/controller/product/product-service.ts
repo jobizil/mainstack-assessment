@@ -114,13 +114,16 @@ export const updateProductService = async (productId: string, payload: Partial<P
 export const deleteProductService = async (productId: string, userId: string) => {
 
     const product = await getProductByIdService(productId);
-
     if (!product) {
         throw new Error("Invalid product id.");
     }
 
+    if (product && product.userId !== userId) {
+        throw new Error("Sorry, you can't delete product not created by you.");
+    }
+
     const deletedProduct = await db.product.delete({
-        where: { id: productId, userId: userId }
+        where: { id: productId }
     });
 
     return deletedProduct

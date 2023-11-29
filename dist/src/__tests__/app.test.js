@@ -9,7 +9,7 @@ describe('Health Check', () => {
     it('should return 200 OK', async () => {
         const res = await (0, supertest_1.default)(app_1.default).get('/api/v1/check');
         expect(res.status).toEqual(200);
-        expect(res.text).toEqual('App is running!');
+        expect(res.text).toEqual('Api is running!');
     });
 });
 //# sourceMappingURL=app.test.js.map

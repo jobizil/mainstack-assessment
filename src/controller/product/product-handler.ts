@@ -29,7 +29,6 @@ export const addProductController = async (req: Request, res: Response) => {
 
         return res.status(500).json({
             success: false,
-            message: "Something went wrong",
             error: error.message
         });
     }
@@ -53,7 +52,6 @@ export const getAllProductsController = async (req: Request, res: Response) => {
 
         return res.status(500).json({
             success: false,
-            message: "Something went wrong",
             error: error.message
         });
     }
@@ -81,7 +79,6 @@ export const getProductByIdController = async (req: Request, res: Response) => {
 
         return res.status(500).json({
             success: false,
-            message: "Something went wrong",
             error: error.message
         });
     }
@@ -114,7 +111,6 @@ export const updateProductController = async (req: Request, res: Response) => {
 
         return res.status(500).json({
             success: false,
-            message: "Something went wrong",
             error: error.message
         });
     }
@@ -144,7 +140,6 @@ export const deleteProductController = async (req: Request, res: Response) => {
 
         return res.status(500).json({
             success: false,
-            message: "Something went wrong",
             error: error.message
         });
     }
@@ -167,7 +162,6 @@ export const getAllProductsByUserIdController = async (req: Request, res: Respon
         console.log(error)
         return res.status(500).json({
             success: false,
-            message: "Something went wrong",
             error: error.message
         });
     }

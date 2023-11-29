@@ -25,7 +25,6 @@ const addProductController = async (req, res) => {
     catch (error) {
         return res.status(500).json({
             success: false,
-            message: "Something went wrong",
             error: error.message
         });
     }
@@ -43,7 +42,6 @@ const getAllProductsController = async (req, res) => {
     catch (error) {
         return res.status(500).json({
             success: false,
-            message: "Something went wrong",
             error: error.message
         });
     }
@@ -67,7 +65,6 @@ const getProductByIdController = async (req, res) => {
     catch (error) {
         return res.status(500).json({
             success: false,
-            message: "Something went wrong",
             error: error.message
         });
     }
@@ -93,7 +90,6 @@ const updateProductController = async (req, res) => {
     catch (error) {
         return res.status(500).json({
             success: false,
-            message: "Something went wrong",
             error: error.message
         });
     }
@@ -118,7 +114,6 @@ const deleteProductController = async (req, res) => {
     catch (error) {
         return res.status(500).json({
             success: false,
-            message: "Something went wrong",
             error: error.message
         });
     }
@@ -138,7 +133,6 @@ const getAllProductsByUserIdController = async (req, res) => {
         console.log(error);
         return res.status(500).json({
             success: false,
-            message: "Something went wrong",
             error: error.message
         });
     }
